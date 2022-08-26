@@ -14,8 +14,7 @@ import java.io.File;
 public class MethodsBearer extends MockDataGenerator {
     private final static File file
             = new File("/Users/aidarka61/IdeaProjects/Slotegrator/API/src/main/resources/newPlayer.json");
-    public static final String username = generateUserName();
-    public static final String email = generateEmail();
+
 
     public static Response getBodyJSONPlayerCredentialsBearer() throws JsonProcessingException {
         NewPlayer newPlayer = new NewPlayer();
@@ -30,9 +29,9 @@ public class MethodsBearer extends MockDataGenerator {
     }
 
     @Test
-    public void getBody() {
+    public void testBody() {
         try {
-            System.out.println(getBodyJSONPlayerCredentialsBearer());
+            System.out.println(getBodyJSONPlayerCredentialsBearer().getBody().asPrettyString());
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }

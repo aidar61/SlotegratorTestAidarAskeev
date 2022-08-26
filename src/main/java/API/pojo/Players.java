@@ -35,7 +35,7 @@ public class Players {
         }
     }
 
-    public static int getStatusCode() {
+    public static int createPlayerAndGetStatusCode() {
         try {
             return MethodsBearer.getBodyJSONPlayerCredentialsBearer().getStatusCode();
         } catch (JsonProcessingException e) {
@@ -45,7 +45,7 @@ public class Players {
 
     @Test
     public void testStatusCode() {
-        System.out.println(getStatusCode());
+        System.out.println(createPlayerAndGetStatusCode());
     }
 
     @Test

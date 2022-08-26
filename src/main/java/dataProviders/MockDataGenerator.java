@@ -8,11 +8,17 @@ public class MockDataGenerator {
 
     private final static Faker faker = new Faker(new Locale("EN"));
 
+    public static String username = generateUserName();
+    public static String email = generateEmail();
+
     protected static String generateUserName() {
-        return faker.name().username();
+        username = faker.name().username();
+        return username;
     }
 
     protected static String generateEmail() {
-        return faker.internet().emailAddress();
+        email = faker.internet().emailAddress();
+        return email;
     }
+
 }

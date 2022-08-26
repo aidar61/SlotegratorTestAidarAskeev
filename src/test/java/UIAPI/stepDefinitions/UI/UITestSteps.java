@@ -46,5 +46,6 @@ public class UITestSteps extends BaseSteps {
     @Then("user should see {int} players on page")
     public void user_should_see_players_on_page(Integer amountOfPlayers) {
         Assertions.assertEquals(amountOfPlayers, majorPage.getAmountOfPlayersOnPage());
+        Driver.getDriver().close();
     }
 }

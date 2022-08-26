@@ -20,4 +20,3 @@ Feature: Test
   Scenario: Get other player credentials
     Given perform GET method with player's token and get other player credentials
     Then status code 404 is returned with following body
-    |{"name": "Not Found","message": "Object not found: 12402","code": 0,"status": 404}|
